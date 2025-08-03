@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chats</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Application</h1>
+        <h3>All Chats</h3>
+        <form method="GET" action="/chats/new">
+            <button class="new-chat-btn">New Chat</button>
+        </form>
+
+        <% for(let chat of chats) { %>
+            <div class="chat">
+                <p><b>From:</b> <%= chat.from %></p>
+                <div class="msg">
+                    <p><%= chat.msg %></p>
+                </div>
+                <p><b>To:</b> <%= chat.to %></p>
+                <div class="meta-info">
+                    <span><%= chat.created_at.toString().split(" ").slice(0, 4).join(" ") %></span>
+                </div>
+                <div class="chat-actions">
+                    <form method="GET" action="/chats/<%= chat._id %>/edit">
+                        <button>Edit</button>
+                    </form>
+                    <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+                        <button class="delete">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+</body>
+</html>

@@ -9,7 +9,7 @@ A simple, real-time web chat application built with Node.js, Express, and MongoD
 - **Create & Send Messages**: Users can compose and send new messages to other users.
 - **View All Chats**: A central feed displays all the chats in a clean, organized manner.
 - **Edit Messages**: Users can modify the content of their sent messages.
-- **Delete Messages**: Users can delete messages with a custom confirmation popup to prevent accidental deletion.
+- **Delete Messages**: Users can delete messages.
 - **Modern UI**: A responsive and aesthetically pleasing user interface styled with custom CSS.
 - **RESTful API**: Follows REST principles for handling chat operations.
 

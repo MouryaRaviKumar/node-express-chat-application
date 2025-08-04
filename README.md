@@ -72,6 +72,3 @@ Follow these instructions to get a copy of the project up and running on your lo
     ├── package.json        # Project dependencies and scripts
     └── README.md           # You are here!
 
-    # 📄 License
-
-        This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
